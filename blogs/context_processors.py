@@ -1,6 +1,11 @@
-from django.apps import AppConfig
+from .models import Category
+from assignments.models import SocialLink
+
+def get_categories(request):
+    categories = Category.objects.all()
+    return dict(categories=categories)
 
 
-class BlogsConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'blogs'
+def get_social_links(request):
+    social_links = SocialLink.objects.all()
+    return dict(social_links=social_links)
