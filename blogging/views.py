@@ -47,11 +47,15 @@ def login(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
 
-            user = auth.authenticate(username=username, password=password)
+            user = auth.authenticate(request, username=username, password=password)
             if user is not None:
                 auth.login(request, user)
                 return redirect('dashboard')
-    form = AuthenticationForm()
+            else:
+                form.add_error(None, 'Invalid username or password.')  # ← handles bad credentials
+    else:
+        form = AuthenticationForm()   # ← only create blank form on GET
+
     context = {
         'form': form,
     }
