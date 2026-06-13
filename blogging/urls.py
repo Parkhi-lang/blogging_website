@@ -1,8 +1,7 @@
-"""
-URL configuration for blogging project.
+"""blog_main URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/6.0/topics/http/urls/
+    https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,21 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import include, path
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
 from blogs import views as BlogsView
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('category/',include('blogs.urls')),
-    path("",views.home,name ='home'),
-    path('blogs/<slug:slug>/',BlogsView.blogs,name ='blogs'),
-    path('blogs/search/',BlogsView.search,name ='search'),
-    path('register/',views.register,name ='register'),
-    path('login/',views.login,name ="login"),
-    path('logout/',views.logout, name = 'logout'),
-    path('dashboard/',include('dashboard.urls')),
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', views.home, name='home'),
+    path('category/', include('blogs.urls')),
+    path('blogs/<slug:slug>/', BlogsView.blogs, name='blogs'),
+    # Search endpoint
+    path('search/', BlogsView.search, name='search'),
+    path('register/', views.register, name='register'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
+
+    # Dashboards
+    path('dashboard/', include('dashboard.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
