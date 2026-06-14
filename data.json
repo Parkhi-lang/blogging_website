@@ -1,0 +1,286 @@
+[
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "Manager",
+    "permissions": [
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_blog",
+        "blogs",
+        "blog"
+      ],
+      [
+        "change_blog",
+        "blogs",
+        "blog"
+      ],
+      [
+        "delete_blog",
+        "blogs",
+        "blog"
+      ],
+      [
+        "view_blog",
+        "blogs",
+        "blog"
+      ],
+      [
+        "add_category",
+        "blogs",
+        "category"
+      ],
+      [
+        "change_category",
+        "blogs",
+        "category"
+      ],
+      [
+        "delete_category",
+        "blogs",
+        "category"
+      ],
+      [
+        "view_category",
+        "blogs",
+        "category"
+      ],
+      [
+        "add_comment",
+        "blogs",
+        "comment"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$6TZ7oTPjMfuhRv5TPlgUec$0tmrfgpns41/PCfy3Zn/SrCa1r5pCtZCKt4bC9X/kRo=",
+    "last_login": "2026-06-13T15:31:38.625Z",
+    "is_superuser": true,
+    "username": "parkhi",
+    "first_name": "",
+    "last_name": "",
+    "email": "parkhigarg2@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-13T02:11:39.599Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$1Y1sNK2KHfFv6L7F9tMFbU$Sv+czfvY7vEw5VI5+Ym6ZbQuHgCFRmZoRArauCJZZ/Y=",
+    "last_login": "2026-06-13T17:20:36.348Z",
+    "is_superuser": false,
+    "username": "editor1",
+    "first_name": "john",
+    "last_name": "Doe",
+    "email": "JohnDoe@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-13T10:34:12Z",
+    "groups": [],
+    "user_permissions": [
+      [
+        "add_blog",
+        "blogs",
+        "blog"
+      ],
+      [
+        "delete_blog",
+        "blogs",
+        "blog"
+      ],
+      [
+        "view_blog",
+        "blogs",
+        "blog"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$vYC0ubnP3DkmmxegSmqa86$91/r6uaSOTRfwvXzo6Pyto8Beb9KMvj65tp5xUQXjE8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Manager",
+    "first_name": "alice",
+    "last_name": "wonderland",
+    "email": "aliceinthewonderland@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-13T14:00:20Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dxj9jqg9of8bn1cf4ghvopkshje3g5kg",
+  "fields": {
+    "session_data": ".eJxVjDEOwyAQBP9ydYQOQ8C4TO83oAOO4CTCkrGrKH-PkFwkzRYzo32Dp2Mv_mi8-SXBBANcflmg-OTaRXpQva8irnXfliB6Ik7bxLwmft3O9u-gUCswwYhycDozJg6oE9u-1mQMUUoKBjWSJRqtVsoRZyeVVlepOEUm4wx8vuWKN-0:1wYS28:wWmwCrr41MNXBkB06YMl5x2gLey3-mJhbWOUnsgPYSQ",
+    "expire_date": "2026-06-27T17:20:36.355Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 1,
+  "fields": {
+    "category_name": "News",
+    "created_at": "2026-06-13T04:03:30.380Z",
+    "updated_at": "2026-06-13T04:03:30.380Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 3,
+  "fields": {
+    "category_name": "Technology",
+    "created_at": "2026-06-13T10:23:42.285Z",
+    "updated_at": "2026-06-13T10:23:42.285Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 4,
+  "fields": {
+    "category_name": "Sports",
+    "created_at": "2026-06-13T10:23:48.616Z",
+    "updated_at": "2026-06-13T10:23:48.616Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 5,
+  "fields": {
+    "category_name": "Education",
+    "created_at": "2026-06-13T10:23:56.954Z",
+    "updated_at": "2026-06-13T10:23:56.954Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 6,
+  "fields": {
+    "category_name": "Health",
+    "created_at": "2026-06-13T10:43:41.666Z",
+    "updated_at": "2026-06-13T10:43:41.666Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 7,
+  "fields": {
+    "category_name": "Politics",
+    "created_at": "2026-06-13T10:44:03.359Z",
+    "updated_at": "2026-06-13T10:44:03.359Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 8,
+  "fields": {
+    "category_name": "buisness",
+    "created_at": "2026-06-13T10:44:24.051Z",
+    "updated_at": "2026-06-13T10:44:24.051Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 3,
+  "fields": {
+    "title": "Apple iPhone 18 Pro Release Date: How WWDC 2026 Clues Signal September Launch Details",
+    "slug": "apple-iphone-18-pro-release-date-how-wwdc-2026-clues-signal-september-launch-details",
+    "category": 3,
+    "author": [
+      "parkhi"
+    ],
+    "featured_image": "uploads/2026/06/13/iphone.png",
+    "short_description": "Apple’s Worldwide Developer Conference fired the starting gun in the race to the next iPhone. The keynote that launched the conference on Monday, June 8 set in motion a timetable which will culminate in the iPhone 18 Pro, iPhone 18 Pro Max and the first folding iPhone going on sale. Here’s all you need to know.",
+    "blog_body": "On the day of the keynote, Apple’s next software cycle, iOS 27, launched, with the first beta released to developers. This exactly matches the iOS schedule from last year, which means the iPhone release schedule is bang on target, for now at least, to mimic last year’s routine.\r\nApple also confirmed that the first public beta will go live in July, again syncing with last year’s schedule with iOS 26. This means the next date in the timetable may be deduced, and that’s the timing of the next special event.",
+    "status": "Published",
+    "is_featured": true,
+    "created_at": "2026-06-13T13:49:01.714Z",
+    "updated_at": "2026-06-13T13:49:01.714Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 4,
+  "fields": {
+    "title": "Haiti at FIFA World Cup 2026: A war escape, a ghost coach and 52 years of waiting",
+    "slug": "haiti-at-fifa-world-cup-2026-a-war-escape-a-ghost-coach-and-52-years-of-waiting",
+    "category": 4,
+    "author": [
+      "parkhi"
+    ],
+    "featured_image": "uploads/2026/06/13/sports.png",
+    "short_description": "Duckens Nazon was already strapped into his seat on the tarmac at Tehran airport when his phone lit up. A friend playing in Israel. The war alarm was ringing. “I said, wow, I’m so lucky because I’m on the plane right now, ready to take off,” Nazon, Haiti’s all-time leading scorer, recalled to Reuters. Ten seconds later, his luck ran out.",
+    "blog_body": "Duckens Nazon was already strapped into his seat on the tarmac at Tehran airport when his phone lit up. A friend playing in Israel. The war alarm was ringing. “I said, wow, I’m so lucky because I’m on the plane right now, ready to take off,” Nazon, Haiti’s all-time leading scorer, recalled to Reuters. Ten seconds later, his luck ran out.\r\n\r\n“The cabin chief said, ‘Everybody has to get off the plane. The war has started. The sky is closed,'” Nazon recalled. “And now you start survival mode.” He watched a strike land 100 metres away before eventually finding a route out of Iran and into France, where he needed a visa for the World Cup.",
+    "status": "Published",
+    "is_featured": true,
+    "created_at": "2026-06-13T13:52:14.453Z",
+    "updated_at": "2026-06-13T13:52:14.453Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 5,
+  "fields": {
+    "title": "Why Siddaramaiah’s final CM act signals his long game at OBC politics vanguard",
+    "slug": "why-siddaramaiahs-final-cm-act-signals-his-long-game-at-obc-politics-vanguard",
+    "category": 7,
+    "author": [
+      "parkhi"
+    ],
+    "featured_image": "uploads/2026/06/13/politics.png",
+    "short_description": "Siddaramaiah, who surpassed the record of former CM Devaraj Urs in January this year to become the longest serving CM of Karnataka, seems to have clearly positioned himself as a champion of social justice in the mould of Urs who vested power with the OBCs, Dalits and minorities during his tenure.",
+    "blog_body": "Just before his exit as the Karnataka Chief Minister on June 3, to make way for his successor D K Shivakumar, Congress leader Siddaramaiah, one of the foremost OBC faces, approved the construction of facilities like community halls and hostels in the state for 150 OBC groups at a cost of Rs 71.85 crore.\r\n\r\nMost of these facilities cleared by Siddaramaiah are meant for his Kuruba OBC community, which accounts for the largest chunk of the backward classes — 12% of the 42% OBC population — in the state. He called the approval a preliminary exercise ahead of “release of grants”.",
+    "status": "Published",
+    "is_featured": true,
+    "created_at": "2026-06-13T13:54:41.128Z",
+    "updated_at": "2026-06-13T13:54:41.128Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 6,
+  "fields": {
+    "title": "Qatar 1-1 Switzerland Stats: Late Header from Captain Khoukhi Earns Qatar First Ever World Cup Point",
+    "slug": "qatar-1-1-switzerland-stats-late-header-from-captain-khoukhi-earns-qatar-first-ever-world-cup-point",
+    "category": 4,
+    "author": [
+      "editor1"
+    ],
+    "featured_image": "uploads/2026/06/14/sport2.png",
+    "short_description": "The Swiss were made to rue missed chances, scoring just once from 26 shots, which amounted to 3.24 expected goals (xG), before Khoukhi headed in late on to stun Murat Yakin’s side.",
+    "blog_body": 
