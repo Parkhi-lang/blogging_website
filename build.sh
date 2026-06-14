@@ -3,4 +3,14 @@ set -o errexit
 pip install -r requirements.txt
 python manage.py collectstatic --no-input
 python manage.py migrate
-echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'yourpassword123')" | python manage.py shell
+python manage.py shell -c "
+from django.contrib.auth.models import User
+if not User.objects.filter(username='admin').exists():
+    User.objects.create_superuser('admin', 'admin@example.com', 'yourpassword123')
+    print('Superuser created')
+else:
+    u = User.objects.get(username='admin')
+    u.set_password('yourpassword123')
+    u.save()
+    print('Password reset')
+"
