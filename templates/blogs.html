@@ -52,12 +52,25 @@
 
 <!-- Main Content Part -->
 {% block content %}
+<h3>{{single_blog.title}}</h3>
+<hr>
+<div>
+<img src ="{{single_blog.featured_image.url}}" alt="{{single_blog.title}}" class="img-fluid wdith = 100% height = auto">
+<hr>
+
+<p>{{single_blog.blog_body}}</p>
+</div>
+
+<p><strong>Category:</strong>{{single_blog.category.category_name}}</p>
+<p></p><b>Created at: </b> {{single_blog.created_at}}</p>
+<p><strong>Author: </strong>{{single_blog.author.username}}</p>
+
 
 {% endblock %}
 
 <!-- Footer Part -->
 <footer class="blog-footer">
-    <p>Django blog built with 💖 <a href="#">Rathan Kumar</a></p>
+    <p>Django blog built with 💖 <a href="#"></a></p>
   </footer>
   </body>
   </html>
